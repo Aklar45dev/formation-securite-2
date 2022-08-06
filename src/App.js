@@ -133,8 +133,8 @@ $(() => {
       <div id="response">
         <div className="res-container">
           <div className="info">
-            <div className="info-title">{selection[id][ansid]}</div>
             <div className="retro-subtitle">{selection[id][retroid]}</div>
+            <div className="info-title">{selection[id][ansid]}</div>
             <div className='key-el'>
               <div className="para">Les éléments clés :</div>
               <div className="para-list">{chapter[id].text[0] === undefined ? "" : chapter[id].text[0]}</div>
