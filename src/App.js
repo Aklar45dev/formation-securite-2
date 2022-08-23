@@ -38,6 +38,20 @@ $(() => {
     }
   }, [audioAns])
 
+  const [width, setWidth] = useState(window.innerWidth);
+
+  function handleWindowSizeChange() {
+      setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+      window.addEventListener('resize', handleWindowSizeChange);
+      return () => {
+          window.removeEventListener('resize', handleWindowSizeChange);
+      }
+  }, []);
+  
+  const isMobile = width <= 768;
+
   const vidRef = useRef(null)
   const audioRef = useRef(null)
   const audioQuestionRef = useRef(null)
@@ -98,7 +112,9 @@ $(() => {
 
   const playAnsAudio = (ids) => {
     if(canPlayAns){
-      setAudioAns(chapter[id].audioAns[ids])
+      if(!isMobile){
+        setAudioAns(chapter[id].audioAns[ids])
+      }
     }
   }
   
