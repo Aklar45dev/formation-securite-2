@@ -11,6 +11,16 @@ html{
   padding-left: 20%;
 }
 
+.debug{
+  display: block;
+}
+
+.resetBtnContainers{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 .title-font{
   color: orangered;
   font-size: 4em;
