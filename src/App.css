@@ -1,18 +1,22 @@
 html{
-  background-color: #fff;
+  background-color: black;
+
 }
 
 .App{
-  background-color: #fff;
   height:max-content;
   display: block;
-  padding-top: 5em;
-  padding-right: 20%;
-  padding-left: 20%;
 }
 
 .debug{
   display: block;
+}
+
+.accueil-bg {
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.35;
 }
 
 .resetBtnContainers{
@@ -22,18 +26,22 @@ html{
 }
 
 .title-font{
-  color: orangered;
-  font-size: 4em;
+  color: white;
+  font-size: 5em;
   text-align: center;
-  margin-bottom: 1.5em;
-  margin-top: 0em;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  margin-top: 0;
 }
 
 .btn-container{
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 33% 33% 33%;
   flex-direction: column;
-  width: 100%;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 5em;
   margin-bottom: 3em;
 }
 
@@ -57,7 +65,7 @@ html{
 }
 
 .btn-title{
-  color: grey;
+  color: rgb(210, 210, 210);
   text-align: center;
   font-size: 1.5em;
   margin-bottom: 0;
@@ -65,7 +73,7 @@ html{
 }
 
 .btn-subtitle{
-  color: grey;
+  color: rgb(210, 210, 210);
   text-justify: center;
   text-align: center;
   margin-top: 0;
@@ -74,28 +82,31 @@ html{
 }
 
 .card{
-  background-color:rgb(231, 231, 231);
+  background-color:rgb(31, 31, 31);
   border-radius: 1em;
   margin: 1em;
 }
 
 #video{
   display: none;
-  background-color: #fff;
+  background-color: rgb(0, 0, 0);
 }
 
 #video video{
+  position: absolute;
+  display: flex;
+  height: 100%;
   width: 100%;
-  border-radius: 1em;
 }
 
 .res-container {
  display: flex;
  flex-direction: row;
  margin-top: 5em;
+ width: 60%;
  align-items: flex-start;
  padding: 4em;
- background-color: rgb(238, 238, 238);
+ background-color: rgb(26, 26, 26);
  border-radius: 1em;
 
 }
@@ -104,16 +115,12 @@ html{
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-radius: 1em;
-}
-
-.video-retro-container video{
-  border-radius: 0.5em;
 }
 
 #response{
   display: none;
   flex-direction: column;
+  align-items: center;
 }
 
 #response video{
@@ -128,7 +135,7 @@ html{
 .para{
   margin-right: 2em;
   padding: 0.5em;
-  color: grey;
+  color: white;
   width: 100%;
   font-weight: 700;
   font-size: 1.5em;
@@ -140,7 +147,7 @@ html{
 }
 
 .para-list{
-  color: grey;
+  color: white;
   width: 100%;
   font-weight: 400;
   font-size: 1.25em;
@@ -149,7 +156,7 @@ html{
 .select-title{
   font-size: 2em;
   text-align: center;
-  color:grey;
+  color:white;
   margin-bottom: 4em;
   font-weight: 700;
 }
@@ -157,7 +164,7 @@ html{
 .info-title{
   font-size: 2em;
   text-align: center;
-  color:grey;
+  color:white;
   margin-bottom: 1em;
   font-weight: 700;
 }
@@ -190,15 +197,14 @@ html{
 }
 
 #selector{
+  overflow: hidden;
   width: 50%;
   display: none;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   top: 0;
-  background-color: #fff;
+  background-color: #000;
   padding-top: 10%;
-  padding-bottom: 5em;
-  padding-bottom: 5em;
   height: 100%;
   left: 0;
   padding-right: 25%;
@@ -213,9 +219,10 @@ html{
   padding-bottom: 1em;
   font-size: 1.25em;
   font-weight: 400;
+  margin: 1em;
   margin-top: 4em;
   cursor: pointer;
-  color: #555;
+  color: #333;
   border: 0;
   display: none;
   background-color: #fff;
@@ -234,6 +241,8 @@ html{
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
   }
 
   .info{
@@ -242,7 +251,7 @@ html{
   }
 
   .App{
-    background-color: #fff;
+    background-color: #000;
     height:max-content;
     display: block;
     padding-top: 0;
@@ -255,13 +264,13 @@ html{
   }
 
   .btn-title{
-    color: grey;
+    color: rgb(210, 210, 210);
     text-align: center;
     font-size: 1.5em;
   }
 
   .btn-subtitle{
-    color: grey;
+    color: rgb(210, 210, 210);
     text-justify: center;
     text-align: center;
     margin-top: 0;
@@ -287,9 +296,14 @@ html{
     display: flex;
     flex-direction: column;
     margin-top: 0;
-    background-color: rgb(255, 255, 255);
     padding: 1em;
+    border-radius: 0;
+    width: auto;
    }
+
+   #response{
+    background-color: rgb(26, 26, 26);
+  }
 
    #response video{
     width: 100%;
@@ -299,7 +313,7 @@ html{
   .info-title{
     font-size: 2em;
     text-align: center;
-    color:grey;
+    color:white;
     margin-top: 0em;
     font-weight: 700;
   }
@@ -310,20 +324,22 @@ html{
   }
 
   .retour{
+    margin: 0.25em;
     margin-top: 2em;
     margin-bottom: 2em;
   }
 
   .title-font{
     margin-bottom: 1em;
-    margin-top: 1em;
     font-size: 3em;
   }
 
   .select-title{
     font-size: 2em;
     text-align: center;
-    color:grey;
+    color:white;
+    margin: 0.25em;
+
     margin-bottom: 1.5em;
     font-weight: 700;
   }
@@ -340,20 +356,29 @@ html{
     width: 100%;
     display: none;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 0;
-    background-color: #fff;
-    padding-bottom: 5em;
-    padding-bottom: 5em;
+    background-color: #000;
     height: 100%;
     left: 0;
     padding: 0;
     padding-top: 10%;
   }
 
-  #video video{
+  .accueil-bg {
+    position: fixed;
     width: 100%;
-    border-radius: 0;
+    z-index: -1;
+    opacity: 0.35;
+    background-color: red;
+  }
+
+  #accueil {
+    background-color: #000;
+  }
+
+  #video video{
+    height: auto;
   }
 
 }

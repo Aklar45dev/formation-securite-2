@@ -60,7 +60,6 @@ $(() => {
   const startvideo = (id) => {
     $("#video").css({display: "block"})
     $("#accueil").css({display: "none"})
-    $("html").fadeOut(0).fadeIn(1000)
     setId(id)
     setUrl(chapter[id].url)
     setAudio(chapter[id].audio)
@@ -69,7 +68,6 @@ $(() => {
   const showQuestions = () => {
     $("#selector").css({display: "flex"})
     $("#response").css({display: "none"})
-    $("html").fadeOut(0).fadeIn(1000)
     audioQuestionRef.current.play()
   }
 
@@ -78,7 +76,6 @@ $(() => {
     $("#response").css({display: "none"})
     $("#retry").css({display: "none"})
     $("#retour").css({display: "none"})
-    $("html").fadeOut(0).fadeIn(1000)
     audioQuestionRef.current.play()
   }
 
@@ -88,7 +85,6 @@ $(() => {
     setAnsid(ans)
     setRetroid(retro)
     audioRef.current.play()
-    $("html").fadeOut(0).fadeIn(1000)
     audioAnsRef.current.pause()
     setCanPlayAns(false)
   }
@@ -124,6 +120,7 @@ $(() => {
       <audio ref={audioQuestionRef} src={chapter[id].audioQuestion} onEnded={() => canHover()} />
       <audio ref={audioAnsRef} src={audioAns} />
       <div id="accueil">
+        <img className="accueil-bg" src='/bg.jpg' />
         <h1 className="title-font">Formation Sécurité</h1>
         <div className='btn-container'>
           <div className='card'>
@@ -150,7 +147,7 @@ $(() => {
         </div>
       </div>
       <div id="video">
-        <video src={url} ref={vidRef} onEnded={showQuestions} />
+        <video src={url} ref={vidRef} onEnded={showQuestions} controls controlsList="nodownload" />
         <div id="selector">
           <div className="select-title">{chapter[id].question}</div>
           <button className="selectBtn" onMouseOver={() => playAnsAudio(0)} onClick={() => validate('1','4')}>{chapter[id].choice1}</button>
