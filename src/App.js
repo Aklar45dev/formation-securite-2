@@ -8,9 +8,9 @@ $(() => {
   
 })
   
-  const chapter = [{audioAns: ["https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/1-1.mp3", "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/1-2.mp3", "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/1-3.mp3"], audioQuestion: "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/1-0.wav", question: "Quel aurait été la meilleure attitude à adopter lors de la réunion du début de quart de travail ?", audio: "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/paragraphe+1.wav", url: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch1-1.mp4', urlMuted: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch1-2.mp4', choice1: 'Souhaitant clarifier ses incompréhensions rapidement, il intervient immédiatement dans le groupe afin de demander des précisions.', choice2: 'À la sortie, il demande au superviseur quand sera le bon moment pour lui parler avant la tâche. Le superviseur lui dit qu’il passera le voir rapidement. Il lui posera alors ses questions.', choice3: 'Il attend que la rencontre se termine et va valider les informations avec le superviseur lorsque tout le monde se dirige vers leur tâche à accomplir.', text: ["• Assurer votre sécurité et celle de vos collègues", "• Poser des questions", "• Choisir le bon moment", "• Favoriser le dialogue"], ansId:"2"},
-                  {audioAns: ["https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/2-1.mp3", "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/2-2.mp3", "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/2-3.mp3"], audioQuestion: "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/2-0.mp3", question: "Quel aurait été le meilleur comportement à adopter pour cette situation ?", audio: "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/paragraphe+2.wav", url: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch2-1V2.mp4', urlMuted: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch2-2.mp4', choice1: 'Incertain, il demande à son collègue qu’il détaille sa méthode et la raison qui le motive à l’utiliser, une fois les instructions reçues, il partage l’opinion de son collègue et décide donc de procéder selon cette méthode qu’ils considèrent tous les deux comme efficace et sécuritaire.', choice2: 'Après avoir demandé des précisions à son collègue et avoir fait la lecture de la fiche de cadenassage, il choisit de faire un compromis entre les deux méthodes. Il considère que prendre le meilleur des deux solutions lui garantira un bon résultat.', choice3: 'Ne pas écouter son collègue, prendre la fiche de cadenassage et appliquer la procédure indiquée dans le règlement.', text: ["• Exercer son jugement", "• Ecouter son collègue tout en conservant son esprit critique", "• Collaborer pour trouver la solution la plus sécuritaire", "• Valider auprès de son superviseur"], ansId:"3"},
-                  {audioAns: ["https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/3-1.mp3", "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/3-2.mp3", "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/3-3.mp3"], audioQuestion: "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/3-0.mp3", question: "Qu'est que Jeff aurait pu faire pour éviter que son collègue se blesse ?", audio: "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/paragraphe+3.wav", url: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch3-1.mp4', urlMuted: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch3-2.mp4', choice1: 'Nouveau en poste, il ne se sent pas à l’aise d’intervenir. Sans aviser son collègue de la situation à risque, il part rapidement aviser son superviseur avant que son collègue vive une situation potentiellement dangereuse.', choice2: 'Il intervient rapidement auprès de son collègue et lui demande d’arrêter sa tâche immédiatement, il avise son collègue que la situation est dangereuse en expliquant les risques d’un tel problème.', choice3: 'Il avise son collègue du risque d’utiliser une meuleuse portative en lui indiquant qu’il ne voudrait pas que quelque chose de malheureux arrive.', text: ["• Signaler le danger", "• Sensibilisé sur les conséquences", "• Favoriser le dialogue", "• Aviser son superviseur en cas d’échec"], ansId:"2"}]
+  const chapter = [{audioAns: ["https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/1-1.mp3", "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/1-2.mp3", "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/1-3.mp3"], audioQuestion: "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/1-0.wav", question: "Quel aurait été la meilleure attitude à adopter lors de la réunion du début de quart de travail?", audio: "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/paragraphe+1.wav", url: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch1-1.mp4', urlMuted: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch1-2.mp4', choice1: 'Souhaitant clarifier ses incompréhensions rapidement, il intervient immédiatement dans le groupe afin de demander des précisions.', choice2: 'À la sortie, il demande au superviseur quand sera le bon moment pour lui parler avant la tâche. Le superviseur lui dit qu’il passera le voir rapidement. Il lui posera alors ses questions.', choice3: 'Il attend que la rencontre se termine et va valider les informations avec le superviseur lorsque tout le monde se dirige vers leur tâche à accomplir.', text: ["• Assurer votre sécurité et celle de vos collègues", "• Poser des questions", "• Choisir le bon moment", "• Favoriser le dialogue"], ansId:"2"},
+                  {audioAns: ["https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/2-1.mp3", "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/2-2.mp3", "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/2-3.mp3"], audioQuestion: "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/2-0.mp3", question: "Quel aurait été le meilleur comportement à adopter pour cette situation?", audio: "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/paragraphe+2.wav", url: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch2-1V2.mp4', urlMuted: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch2-2.mp4', choice1: 'Incertain, il demande à son collègue qu’il détaille sa méthode et la raison qui le motive à l’utiliser, une fois les instructions reçues, il partage l’opinion de son collègue et décide donc de procéder selon cette méthode qu’ils considèrent tous les deux comme efficace et sécuritaire.', choice2: 'Après avoir demandé des précisions à son collègue et avoir fait la lecture de la fiche de cadenassage, il choisit de faire un compromis entre les deux méthodes. Il considère que prendre le meilleur des deux solutions lui garantira un bon résultat.', choice3: 'Ne pas écouter son collègue, prendre la fiche de cadenassage et appliquer la procédure indiquée dans le règlement.', text: ["• Exercer son jugement", "• Ecouter son collègue tout en conservant son esprit critique", "• Collaborer pour trouver la solution la plus sécuritaire", "• Valider auprès de son superviseur"], ansId:"3"},
+                  {audioAns: ["https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/3-1.mp3", "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/3-2.mp3", "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/3-3.mp3"], audioQuestion: "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/3-0.mp3", question: "Qu'est que Jeff aurait pu faire pour éviter que son collègue se blesse?", audio: "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/paragraphe+3.wav", url: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch3-1.mp4', urlMuted: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch3-2.mp4', choice1: 'Nouveau en poste, il ne se sent pas à l’aise d’intervenir. Sans aviser son collègue de la situation à risque, il part rapidement aviser son superviseur avant que son collègue vive une situation potentiellement dangereuse.', choice2: 'Il intervient rapidement auprès de son collègue et lui demande d’arrêter sa tâche immédiatement, il avise son collègue que la situation est dangereuse en expliquant les risques d’un tel problème.', choice3: 'Il avise son collègue du risque d’utiliser une meuleuse portative en lui indiquant qu’il ne voudrait pas que quelque chose de malheureux arrive.', text: ["• Signaler le danger", "• Sensibilisé sur les conséquences", "• Favoriser le dialogue", "• Aviser son superviseur en cas d’échec"], ansId:"2"}]
 
   const selection = [{1: "Demander des précisions pendant la réunion préparatoire.", 2: "Demander au superviseur de venir le voir rapidement pour des précisions.", 3: "Demander des renseignements au superviseur juste après la réunion préparatoire.", 4: 'Pas tout à fait...', 5: 'Bon choix!', 6: 'Pas tout à fait...'},
                     {1: "Considérer l’expérience de son collègue et suivre ses directives même si elles sont contraires à la procédure.", 2: "Prendre le meilleur des deux options.", 3: "Appliquer la procédure indiquée dans le règlement.", 4: 'Pas la bonne réponse...', 5: 'Pas tout à fait...', 6: 'Bon choix!'},
@@ -44,13 +44,13 @@ $(() => {
   }
 
   useEffect(() => {
-      window.addEventListener('resize', handleWindowSizeChange);
       getSingleCacheData(cacheToFetch.cacheName, cacheToFetch.url)
+      window.addEventListener('resize', handleWindowSizeChange)
       return () => {
-          window.removeEventListener('resize', handleWindowSizeChange);
+          window.removeEventListener('resize', handleWindowSizeChange)
       }
-  }, []);
-  
+    }, [])
+
   const isMobile = width <= 768;
 
   const vidRef = useRef(null)
@@ -130,7 +130,7 @@ $(() => {
   }
 
   const showBtn = () => {
-    if (ansid == chapter[id].ansId)
+    if (ansid === chapter[id].ansId)
       {
         $("#retour").css({display: 'block'})
       }
@@ -228,7 +228,7 @@ $(() => {
 
   // Cache Object 
   const cacheToFetch = { cacheName: 'MyCache', url: `https://${window.location.host}` }
-
+  $('#vid').attr('disablePictureInPicture', 'true');
   
   return (
     <div className="App" id='app'>
@@ -236,10 +236,10 @@ $(() => {
       <audio ref={audioQuestionRef} src={chapter[id].audioQuestion} onEnded={() => canHover()} />
       <audio ref={audioAnsRef} src={audioAns} />
       <div id="outro">
-        <img className="accueil-bg" src='/bg.jpg' />
+        <img alt="" className="accueil-bg" src='/bg.jpg' />
         <h1 className="title-font">Fin</h1>
         <div className="outro-text">
-          <div className='out-text'>Merci d’avoir aidé Jeff à faire les bons choix ! En résumer : </div>
+          <div className='out-text'>Merci d’avoir aidé Jeff à faire les bons choix! En résumer : </div>
           <div className='point'>⦁	Ne pas craindre de déranger pour poser une question ou de demander une information</div>
           <div className='point'>⦁	Respecter les règles et les procédures en place</div>
           <div className='point'>⦁	En cas de doute, ne pas hésiter à demander à son superviseur</div>
@@ -249,7 +249,7 @@ $(() => {
         <button className='start-btn' onClick={() => reload()}>Retour</button>
       </div>
       <div id="intro">
-        <img className="accueil-bg" src='/bg.jpg' />
+        <img alt="" className="accueil-bg" src='/bg.jpg' />
         <h1 className="title-font">Avant de commencer</h1>
         <div className="intro-text">
           Cette formation interactive vous permettra, en tant que nouveau travailleur ou travailleur expérimenté dans le milieu minier, de naviguer dans des situations diverses de travail.<br></br><br></br>  
@@ -260,12 +260,12 @@ $(() => {
         <button className='start-btn' onClick={() => showChapters()}>Commencer</button>
       </div>
       <div id="accueil">
-        <img className="accueil-bg" src='/bg.jpg' />
-        <h1 className="main-title">Les choix de Jeff lors de sa première journée de travail</h1>
+        <img alt="" className="accueil-bg" src='/bg.jpg' />
+        <h1 className="main-title">Les choix de Jeff lors de sa<br></br>première journée de travail</h1>
         <div className='btn-container'>
           <div className='card' id="card1">
             <button className="btn" onClick={() => startvideo(0)}>
-              <img className='check' id="check1" src="./check.png" />
+              <img alt="" className='check' id="check1" src="./check.png" />
               <img alt="pic" className="btn-pic" src='https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/frame1.png' />
             </button>
             <h2 className="btn-title">Chapitre 1</h2>
@@ -273,7 +273,7 @@ $(() => {
           </div>
           <div className='card' id="card2">
             <button className="btn" onClick={() => startvideo(1)}>
-              <img className='check' id="check2" src="./check.png" />
+              <img alt="" className='check' id="check2" src="./check.png" />
               <img alt="pic" className="btn-pic" src='https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/Ch2+freeze+frame+1.png' />
             </button>
             <h2 className="btn-title">Chapitre 2</h2>
@@ -281,7 +281,7 @@ $(() => {
           </div>
           <div className='card' id="card3">
             <button className="btn" onClick={() => startvideo(2)}>
-              <img className='check' id="check3" src="./check.png" />
+              <img alt="" className='check' id="check3" src="./check.png" />
               <img  alt="pic" className="btn-pic" src='https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/Ch3+freeze+frame+2.png' />
             </button>
             <h2 className="btn-title">Chapitre 3</h2>
@@ -290,7 +290,7 @@ $(() => {
         </div>
       </div>
       <div id="video">
-        <video src={url} ref={vidRef} onEnded={showQuestions} controls controlsList="nodownload" />
+        <video src={url} ref={vidRef} id="vid" onEnded={showQuestions} controls controlsList="nofullscreen nodownload noplaybackrate" />
         <div id="selector">
           <div className="select-title">{chapter[id].question}</div>
           <button className="selectBtn" onMouseOver={() => playAnsAudio(0)} onClick={() => validate('1','4')}>{chapter[id].choice1}</button>
@@ -303,7 +303,7 @@ $(() => {
           <div className="info">
             <div className={ansid === chapter[id].ansId ? "retro-subtitle-green" : "retro-subtitle"}>{selection[id][retroid]}</div>
             <div className="info-title">{selection[id][ansid]}</div>
-            <img className='img-ans' src={ansid === chapter[id].ansId ? "./check.png" : "./x.png"} />
+            <img alt="" className='img-ans' src={ansid === chapter[id].ansId ? "./check.png" : "./x.png"} />
           </div>
           <div className='video-retro-container'>
             <video src={chapter[id].urlMuted} autoPlay muted loop />
