@@ -301,9 +301,9 @@ $(() => {
       <div id="response">
         <div className="res-container">
           <div className="info">
-            <div className="retro-subtitle">{selection[id][retroid]}</div>
+            <div className={ansid === chapter[id].ansId ? "retro-subtitle-green" : "retro-subtitle"}>{selection[id][retroid]}</div>
             <div className="info-title">{selection[id][ansid]}</div>
-            
+            <img className='img-ans' src={ansid === chapter[id].ansId ? "./check.png" : "./x.png"} />
           </div>
           <div className='video-retro-container'>
             <video src={chapter[id].urlMuted} autoPlay muted loop />

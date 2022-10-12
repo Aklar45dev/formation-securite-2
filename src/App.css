@@ -2,6 +2,11 @@ html{
   background-color: black;
 }
 
+.img-ans{
+  width: 50%;
+  filter: brightness(3);
+}
+
 .App{
   height:max-content;
   display: block;
@@ -140,7 +145,7 @@ html{
 }
 
 .card{
-  background-color:rgb(31, 31, 31);
+  background-color:rgb(17, 17, 17);
   border-radius: 1em;
   margin: 1em;
 }
@@ -164,7 +169,7 @@ html{
  width: 60%;
  align-items: flex-start;
  padding: 4em;
- background-color: rgb(26, 26, 26);
+ background-color: rgb(17, 17, 17);
  border-radius: 1em;
 
 }
@@ -188,6 +193,9 @@ html{
 .info{
   width: 100%;
   margin-right: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .para{
@@ -247,6 +255,15 @@ html{
   font-weight: 700;
 }
 
+.retro-subtitle-green{
+  font-size: 2.5em;
+  text-align: center;
+  color: rgb(13, 255, 0);
+  margin-top: 0em;
+  margin-bottom: 0.25em;
+  font-weight: 700;
+}
+
 .selectBtn{
   width: 100%;
   font-size: 1.25em;
@@ -292,7 +309,7 @@ html{
   margin: 1em;
   margin-top: 4em;
   cursor: pointer;
-  color: #333;
+  color: rgb(17, 17, 17);
   border: 0;
   display: none;
   background-color: #fff;
@@ -408,6 +425,7 @@ html{
     text-align: center;
     color:white;
     margin-top: 0em;
+    margin-bottom: 0.25em;
     font-weight: 700;
   }
 
