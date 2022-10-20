@@ -44,7 +44,6 @@ $(() => {
   }
 
   useEffect(() => {
-      getSingleCacheData(cacheToFetch.cacheName, cacheToFetch.url)
       window.addEventListener('resize', handleWindowSizeChange)
       return () => {
           window.removeEventListener('resize', handleWindowSizeChange)
@@ -94,12 +93,6 @@ $(() => {
   }
 
   const retour = () => {
-    let tempsCache = []
-    tempsCache = cacheData
-    tempsCache[id+1] = 1
-    setCacheData(tempsCache)
-    addDataIntoCache('MyCache', `https://${window.location.host}`, cacheData)
-    updateCards()
     $("#response").css({display: "none"})
     $("#selector").css({display: "none"})
     $("#retour").css({display: 'none'})
@@ -110,23 +103,6 @@ $(() => {
     else {
       $("#accueil").css({display: "block"})
     }
-  }
-
-  const updateCards = () => {
-    cacheData.forEach((el, i) => {
-      if (i !== 0) {
-        if(el === 0) {
-          $(`#card${i+1}`).css({filter: "blur(5px)"})
-          $(`#card${i+1}`).css('pointer-events', 'none')
-          $(`#check${i}`).css('display', 'none')
-        } 
-        if(el === 1) {
-          $(`#card${i+1}`).css({filter: "blur(0px)"})
-          $(`#card${i+1}`).css('pointer-events', 'all')
-          $(`#check${i}`).css('display', 'block')
-        }
-      }
-    })
   }
 
   const showBtn = () => {
@@ -164,70 +140,6 @@ $(() => {
     $("#accueil").css({display: "block"})
   }
 
-  const addDataIntoCache = (cacheName, url, response) => {
-    // Converting our response into Actual Response form
-    const data = new Response(JSON.stringify(response));
-  
-    if ('caches' in window) {
-      // Opening given cache and putting our data into it
-      caches.open(cacheName).then((cache) => {
-        cache.put(url, data);
-      });
-    }
-  }
-
-  // Our state to store fetched cache data
-  const [cacheData, setCacheData] = React.useState([0,0,0,0]);
-  
-  // Function to get single cache data
-  const getSingleCacheData = async (cacheName, url) => {
-    if (typeof caches === 'undefined') return false;
-    
-    const cacheStorage = await caches.open(cacheName);
-    const cachedResponse = await cacheStorage.match(url);
-    
-    // If no cache exists
-    if (!cachedResponse || !cachedResponse.ok) {
-      setCacheData([0,0,0,0])
-      cacheData.forEach((el, i) => {
-        if (i !== 0) {
-          if(el === 0) {
-            $(`#card${i+1}`).css({filter: "blur(5px)"})
-            $(`#card${i+1}`).css('pointer-events', 'none')
-            $(`#check${i}`).css('display', 'none')
-
-          } 
-          if(el === 1) {
-            $(`#card${i+1}`).css({filter: "blur(0px)"})
-            $(`#card${i+1}`).css('pointer-events', 'all')
-            $(`#check${i+1}`).css('display', 'block')
-           
-          }
-        }
-      })
-    }
-  
-    return cachedResponse.json().then((item) => {
-      setCacheData(item)
-      item.forEach((el, i) => {
-        if (i !== 0) {
-          if(el === 0) {
-            $(`#card${i+1}`).css({filter: "blur(5px)"})
-            $(`#card${i+1}`).css('pointer-events', 'none')
-            $(`#check${i}`).css('display', 'none')
-          } 
-          if(el === 1) {
-            $(`#card${i+1}`).css({filter: "blur(0px)"})
-            $(`#card${i+1}`).css('pointer-events', 'all')
-            $(`#check${i}`).css('display', 'block')
-          }
-        }
-      })
-    })
-  }
-
-  // Cache Object 
-  const cacheToFetch = { cacheName: 'MyCache', url: `https://${window.location.host}` }
   $('#vid').attr('disablePictureInPicture', 'true');
   
   return (
